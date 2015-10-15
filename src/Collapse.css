@@ -1,0 +1,71 @@
+/**
+* Collapse Component Style for uxcore
+* @author vicent.bian
+*
+* Copyright 2014-2015, Uxcore Team, Alinw.
+* All rights reserved.
+*/
+/*@pager-bg:                             @pagination-bg;
+@pager-border:                         @pagination-border;
+@pager-border-radius:                  15px;
+
+@pager-hover-bg:                       @pagination-hover-bg;
+
+@pager-active-bg:                      @pagination-active-bg;
+@pager-active-color:                   @pagination-active-color;*/
+.kuma-collapse {
+  background-color: #f4f4f4;
+  border: 1px solid #e8e8e8;
+}
+.kuma-collapse > .kuma-collapse-item {
+  border-top: 1px solid #e8e8e8;
+}
+.kuma-collapse > .kuma-collapse-item:first-child {
+  border-top: none;
+}
+.kuma-collapse > .kuma-collapse-item > .kuma-collapse-header {
+  height: 38px;
+  line-height: 38px;
+  padding-left: 32px;
+  color: #333;
+  cursor: pointer;
+  position: relative;
+}
+.kuma-collapse > .kuma-collapse-item > .kuma-collapse-header .arrow {
+  position: absolute;
+  top: -1px;
+  left: 16px;
+  display: inline-block;
+  margin-right: 8px;
+  color: #333;
+  vertical-align: middle;
+  font-style: normal;
+}
+.kuma-collapse > .kuma-collapse-item > .kuma-collapse-header .arrow:before {
+  font-family: 'kuma' !important;
+  content: "\e615";
+  font-size: 16px;
+}
+.kuma-collapse-content {
+  display: none;
+  overflow: hidden;
+  color: #333;
+  padding: 0 16px;
+  background-color: #fff;
+}
+.kuma-collapse-content > .kuma-collapse-content-box {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.kuma-collapse-content-active {
+  display: block;
+}
+.kuma-collapse-collapsing {
+  transition-duration: .24s;
+  transition-timing-function: ease-out;
+}
+.kuma-collapse > .kuma-collapse-item-active > .kuma-collapse-header .arrow:before {
+  content: "\e614";
+}
+
+/*# sourceMappingURL=Collapse.css.map */
