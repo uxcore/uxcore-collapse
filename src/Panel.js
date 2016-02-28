@@ -1,4 +1,5 @@
 import React, { PropTypes, createClass } from 'react';
+import ReactDOM from 'react-dom';
 import classnames from 'classnames';
 
 const CollapsePanel = createClass({

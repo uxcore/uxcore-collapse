@@ -1,4 +1,5 @@
 import React, { PropTypes, createClass, Children } from 'react';
+import ReactDOM from 'react-dom';
 import CollapsePanel from './Panel';
 
 const Collapse = createClass({

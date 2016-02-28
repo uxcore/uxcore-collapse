@@ -2,6 +2,9 @@
 
 ---
 
+## 1.1.1
+`CHANGED` update scaffold
+
 ## 1.1.0
 `UPGRADE` remove rc-collapse dep
 
