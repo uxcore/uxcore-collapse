@@ -6,19 +6,18 @@
 
 uxcore-collapse ui component for react
 
-#### setup develop environment
+#### Setup develop environment
 
 ```sh
-$ git clone https://github.com/uxcore/uxcore-collapse
-$ cd uxcore-collapse
+$ git clone https://github.com/uxcore/uxcore-collapse && cd uxcore-collapse
 $ npm install
-$ gulp server
+$ npm start
 ```
 
 ## Usage
 ```js
-let Collapse = require('../src');
-let Panel = Collapse.Panel;
+const Collapse = require('../src');
+const Panel = Collapse.Panel;
 
 ReactDOM.render(
 	<Collapse defaultActiveKey={["1"]} onChange={callback}>
@@ -34,8 +33,9 @@ ReactDOM.render(
 	</Collapse>, target);
 ```
 
-## demo
-http://uxcore.github.io/uxcore/components/uxcore-collapse/
+## Demo
+
+[http://uxco.re/components/collapse/](http://uxco.re/components/collapse/)
 
 ## API
 
@@ -44,14 +44,19 @@ http://uxcore.github.io/uxcore/components/uxcore-collapse/
 
 | 配置项 | 类型 | 必填 | 默认值 | 功能/备注 |
 |---|---|---|---|---|
-|activeKey | array|string | the first panel key | 当前激活 tab 面板的 key 默认无，accordion模式下默认第一个元素 |
-|defaultActiveKey | array|string | null | 初始化选中面板的 key |
-|accordion | Boolean | false | 手风琴模式 |
-|onChange | Function | 无 | 切换面板的回调 |
+|prefixCls | string | optional | `kuma-collapse` | 默认类名，用户可以通过修改此项来完成样式的定制 |
+|activeKey | array/string | optional | the first panel key  | 当前激活 tab 面板的 key 默认无，accordion模式下默认第一个元素 |
+|defaultActiveKey | array/string | optional | `null` | 初始化选中面板的 key |
+|accordion | bool | optional | `false` | 手风琴模式 |
+|onChange | function | optional | `()=>{}` | 切换面板的回调 |
 
 ### Collapse.Panel
-#
+
 | 配置项 | 类型 | 必填 | 默认值 | 功能/备注 |
 |---|---|---|---|---|
-|key | String | 无 | 对应 activeKey  |
-|header | React.Element or String | 无 | 面板头内容 |
+
+|prefixCls| string | optional | 默认类名，用户可以通过修改此项来完成样式的定制 |
+|header | string/number/node | optional | `null`| 面板头内容 |
+|isActive| bool | optional | false | 面板当前是否展开,true 表示展开 |
+|onItemClick| function| optional | `(isActive, e)=>{}`| 面板头点击事件 |
+
