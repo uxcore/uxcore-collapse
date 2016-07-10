@@ -52,7 +52,7 @@ $ npm start
 | 配置项 | 类型 | 必填 | 默认值 | 功能/备注 |
 |---|---|---|---|---|
 |key| string | optional | index | 当前面板的 key |
-|prefixCls| string | optional | 默认类名，用户可以通过修改此项来完成样式的定制 |
+|prefixCls| string | optional | Collapse.prefixCls |默认类名，用户可以通过修改此项来完成样式的定制 |
 |header | string/number/node | optional | `null`| 面板头内容 |
 |isActive| bool | optional | false | 面板当前是否展开,true 表示展开 |
 |onItemClick| function| optional | `(isActive, e)=>{}`| 面板头点击事件 |
