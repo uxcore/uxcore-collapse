@@ -45,7 +45,7 @@ $ npm start
 |activeKey | array/string | optional | the first panel key  | 当前激活面板的 key 默认无，accordion模式下默认第一个元素 |
 |defaultActiveKey | array/string | optional | `null` | 初始化选中面板的 key |
 |accordion | bool | optional | `false` | 手风琴模式 |
-|onChange | function | optional | `()=>{}` | 切换面板的回调 |
+|onChange | function | optional | `(key)=>{}` | 切换面板的回调 |
 
 ### Collapse.Panel
 
