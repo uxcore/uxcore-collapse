@@ -2,7 +2,7 @@
 
 ---
 
-## 1.1.2
+## 1.2.0
 
 `UPGRADE` update UI
 
