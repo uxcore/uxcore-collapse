@@ -2,6 +2,10 @@
 
 ---
 
+## 1.1.2
+
+`UPGRADE` update UI
+
 ## 1.1.1
 `CHANGED` update scaffold
 
