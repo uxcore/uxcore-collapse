@@ -36,12 +36,12 @@ const CollapsePanel = createClass({
             [`${prefixCls}-content`]: true,
             [`${prefixCls}-content-active`]: isActive,
         });
-
+        const arrowCls = isActive? "arrow-active": "arrow";
         return (
             <div className={`${prefixCls}-item`}>
                 <div className={headerCls} onClick={this.handleItemClick}
                      role="tab" aria-expanded={isActive}>
-                    <i className="arrow"></i>
+                    <i className={arrowCls}></i>
                     {header}
                 </div>
                 <div className={contentCls}

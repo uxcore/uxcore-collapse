@@ -28,7 +28,7 @@
       cursor: pointer;
       position: relative;
 
-      .arrow {
+      .arrow, .arrow-active{
         position: absolute;
         top: 0;
         left: 0;
@@ -42,6 +42,12 @@
           font-family: 'kuma' !important;
           content: "\e615";
           font-size: 14px;
+        }
+      }
+
+      .arrow-active {
+        &:before {
+          content: "\e614" !important;
         }
       }
     }
