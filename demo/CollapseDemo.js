@@ -27,7 +27,7 @@ class Demo extends React.Component {
 
     render() {
         return (
-            <div>
+            <div style={{padding: '20px'}}>
                 <p>可以同时展开多个面板，这个例子默认展开了第一个。</p>
                 <Collapse defaultActiveKey={["1"]} onChange={callback}>
                     <Panel header={`This is panel header 1`} key="1">

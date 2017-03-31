@@ -9,24 +9,30 @@
 @collapse-prefix-cls: kuma-collapse;
 
 .@{collapse-prefix-cls} {
-  background-color: @basic-300;
-  border: 1px solid @border-color;
+  background-color: @basic-100;
+  border: 1px solid rgba(31, 56, 88, 0.2);
+  border-radius: 3px;
 
   & > &-item {
-    border-top: 1px solid @border-color;
+    border-top: 1px solid rgba(31, 56, 88, 0.1);
+
     &:first-child {
       border-top: none;
     }
 
     > .@{collapse-prefix-cls}-header {
-      height: 38px;
-      line-height: 38px;
+      height: 35px;
+      line-height: 35px;
       padding-left: 32px;
       padding-right: 16px;
-      font-size: 14px;
+      font-size: 12px;
       color: @text-secondary-color;
       cursor: pointer;
       position: relative;
+
+      &:hover {
+        color: @text-primary-color;
+      }
 
       .arrow, .arrow-active{
         position: absolute;
@@ -38,6 +44,7 @@
         font-style: normal;
         width: 32px;
         text-align: center;
+
         &:before {
           font-family: 'kuma' !important;
           content: "\e615";
@@ -56,13 +63,16 @@
   &-content {
     display: none;
     overflow: hidden;
-    color: @text-secondary-color;
-    padding: 0 16px;
-    background-color: #fff;
+    color: @text-primary-color;
+    padding: 0 14px;
+    background-color: rgba(31, 56, 88, 0.04);
+    font-size: 12px;
+    line-height: 18px;
 
     & > &-box {
-      padding-top: 16px;
-      padding-bottom: 16px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      padding-left: 20px;
     }
 
     &-active {
