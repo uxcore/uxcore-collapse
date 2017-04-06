@@ -28,7 +28,7 @@ class Demo extends React.Component {
     render() {
         return (
             <div style={{padding: '20px'}}>
-                <p>可以同时展开多个面板，这个例子默认展开了第一个。</p>
+                <h2>可以同时展开多个面板，这个例子默认展开了第一个。</h2>
                 <Collapse defaultActiveKey={["1"]} onChange={callback}>
                     <Panel header={`This is panel header 1`} key="1">
                         <p>{text}</p>
@@ -40,7 +40,7 @@ class Demo extends React.Component {
                         <p>{text}</p>
                     </Panel>
                 </Collapse>
-                <p>手风琴，每次只打开一个tab。默认打开第一个。</p>
+                <h2>手风琴，每次只打开一个tab。默认打开第一个。</h2>
                 <Collapse accordion={true}>
                     <Panel header={`This is panel header 1`} key="1">
                         <p>{text}</p>
@@ -52,7 +52,7 @@ class Demo extends React.Component {
                         <p>{text}</p>
                     </Panel>
                 </Collapse>
-                <p>手风琴嵌套折叠面板</p>
+                <h2>手风琴嵌套折叠面板</h2>
                 <Collapse onChange={callback} accordion={true}>
                     <Panel header={`This is panel header 1`} key="1">
                         <Collapse defaultActiveKey="1">
