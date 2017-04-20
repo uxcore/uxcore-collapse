@@ -8,6 +8,7 @@ const Collapse = createClass({
 
     propTypes: {
         prefixCls: PropTypes.string,
+        className: React.PropTypes.string,
         activeKey: PropTypes.oneOfType([
             PropTypes.string,
             PropTypes.arrayOf(PropTypes.string),
