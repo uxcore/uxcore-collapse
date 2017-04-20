@@ -117,13 +117,12 @@ const Collapse = createClass({
     },
 
     render() {
-        const t = this;
-        const className = classnames(t.props.prefixCls, {
-            [t.props.className]: !!t.props.className,
+        const className = classnames(this.props.prefixCls, {
+            [this.props.className]: !!this.props.className,
         });
         return (
             <div className={className}>
-                {t.getItems()}
+                {this.getItems()}
             </div>
         );
     }
