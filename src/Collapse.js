@@ -1,4 +1,5 @@
 import React, {PropTypes, createClass, Children} from 'react';
+import classnames from 'classnames';
 import CollapsePanel from './Panel';
 
 const Collapse = createClass({
@@ -8,6 +9,7 @@ const Collapse = createClass({
 
     propTypes: {
         prefixCls: PropTypes.string,
+        className: React.PropTypes.string,
         activeKey: PropTypes.oneOfType([
             PropTypes.string,
             PropTypes.arrayOf(PropTypes.string),
@@ -115,10 +117,13 @@ const Collapse = createClass({
     },
 
     render() {
-        const prefixCls = this.props.prefixCls;
+        const me = this;
+        const className = classnames(me.props.prefixCls, {
+            [me.props.className]: !!me.props.className,
+        });
         return (
-            <div className={prefixCls}>
-                {this.getItems()}
+            <div className={className}>
+                {me.getItems()}
             </div>
         );
     }
