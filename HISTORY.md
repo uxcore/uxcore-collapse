@@ -2,6 +2,10 @@
 
 ---
 
+## 1.3.1
+
+`FIXED` support prop `className`
+
 ## 1.3.0
 
 `CHANGED` new style
