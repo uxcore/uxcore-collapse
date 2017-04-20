@@ -116,8 +116,9 @@ const Collapse = createClass({
 
     render() {
         const prefixCls = this.props.prefixCls;
+        const className = this.props.className;
         return (
-            <div className={prefixCls}>
+            <div className={`${prefixCls} ${className}`}>
                 {this.getItems()}
             </div>
         );
