@@ -1,4 +1,5 @@
 import React, {PropTypes, createClass, Children} from 'react';
+import classnames from 'classnames';
 import CollapsePanel from './Panel';
 
 const Collapse = createClass({
@@ -116,11 +117,13 @@ const Collapse = createClass({
     },
 
     render() {
-        const prefixCls = this.props.prefixCls;
-        const className = this.props.className;
+        const t = this;
+        const className = classnames(t.props.prefixCls, {
+            [t.props.className]: !!t.props.className,
+        });
         return (
-            <div className={`${prefixCls} ${className}`}>
-                {this.getItems()}
+            <div className={className}>
+                {t.getItems()}
             </div>
         );
     }
