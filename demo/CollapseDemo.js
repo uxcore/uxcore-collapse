@@ -23,7 +23,6 @@ export default class Demo extends Component {
   }
 
   handleChange(key) {
-    /* eslint-disable no-console */
     console.log(key);
   }
 
