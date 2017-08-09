@@ -1,6 +1,11 @@
 # History
 
 ---
+## 1.4.0
+`CHANGED` rewrite and lint uxcore-collapse by ES6+
+
+`CHANGED` add animation while toggling a panel component
+
 
 ## 1.3.1
 

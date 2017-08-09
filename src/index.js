@@ -6,4 +6,6 @@
  * All rights reserved.
  */
 
-module.exports = require('./Collapse');
+import Collapse from './Collapse';
+
+export default Collapse;
