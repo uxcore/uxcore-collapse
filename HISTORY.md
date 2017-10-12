@@ -1,6 +1,10 @@
 # History
 
 ---
+## 2.0.1
+
+* `CHANGED` change to React 15.x
+
 ## 2.0.0
 
 * `CHANGED` rewrite and lint uxcore-collapse by ES6+
