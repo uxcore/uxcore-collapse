@@ -1,4 +1,5 @@
-import React, { PropTypes, Component, Children } from 'react';
+import React, { Component, Children } from 'react';
+import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import CollapsePanel from './Panel';
 import util from './util';
