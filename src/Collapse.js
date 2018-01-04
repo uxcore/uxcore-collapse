@@ -18,7 +18,7 @@ export default class Collapse extends Component {
 
   static propTypes = {
     prefixCls: PropTypes.string,
-    className: React.PropTypes.string,
+    className: PropTypes.string,
     activeKey: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.arrayOf(PropTypes.string),
