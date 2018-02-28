@@ -1,6 +1,11 @@
 # History
 
 ---
+
+## 2.1.0
+
+* `CHANGED` onChange add new param `activeKey`
+
 ## 2.0.1
 
 * `CHANGED` change to React 15.x

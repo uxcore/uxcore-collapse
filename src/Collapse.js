@@ -1,11 +1,11 @@
 import React, { Component, Children } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import cloneDeep from 'lodash/cloneDeep';
 import CollapsePanel from './Panel';
 import util from './util';
 
 export default class Collapse extends Component {
-
   static displayName = 'Collapse'
 
   static Panel = CollapsePanel
@@ -97,7 +97,7 @@ export default class Collapse extends Component {
     if (!accordion && !Array.isArray(activeKey)) {
       activeKey = activeKey ? [activeKey] : [];
     }
-    return activeKey;
+    return cloneDeep(activeKey);
   }
 
   handleClickItem(key) {
@@ -119,7 +119,7 @@ export default class Collapse extends Component {
 
         this.setState({ activeKey });
       }
-      this.props.onChange(key);
+      this.props.onChange(key, activeKey);
     };
   }
 

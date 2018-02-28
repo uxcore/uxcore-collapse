@@ -42,10 +42,10 @@ $ npm start
 | 配置项 | 类型 | 必填 | 默认值 | 功能/备注 |
 |---|---|---|---|---|
 |prefixCls | string | optional | `kuma-collapse` | 默认类名，用户可以通过修改此项来完成样式的定制 |
-|activeKey | array/string | optional | the first panel key  | 当前激活面板的 key 默认无，accordion模式下默认第一个元素 |
+|activeKey | array/string | optional | the first panel key  | 当前激活面板的 key 默认无，accordion 模式下默认第一个元素 |
 |defaultActiveKey | array/string | optional | `null` | 初始化选中面板的 key |
 |accordion | bool | optional | `false` | 手风琴模式 |
-|onChange | function | optional | `(key)=>{}` | 切换面板的回调 |
+|onChange | function | optional | `(key，activeKey)=>{}` | 切换面板的回调，参数 key 为当前变动的面板，activeKey 为所有激活的面板 |
 
 ### Collapse.Panel
 

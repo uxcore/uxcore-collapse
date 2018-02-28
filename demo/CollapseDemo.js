@@ -22,8 +22,8 @@ export default class Demo extends Component {
     };
   }
 
-  handleChange(key) {
-    console.log(key);
+  handleChange(key, activeKey) {
+    console.log(key, activeKey);
   }
 
   render() {
@@ -42,7 +42,7 @@ export default class Demo extends Component {
           </Panel>
         </Collapse>
         <h2>手风琴，每次只打开一个tab。默认打开第一个。</h2>
-        <Collapse accordion>
+        <Collapse accordion onChange={this.handleChange}>
           <Panel header={'This is panel header 1'} key="1">
             <p>{text}</p>
           </Panel>
