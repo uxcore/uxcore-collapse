@@ -2,6 +2,10 @@
 
 ---
 
+## 2.1.1
+
+* `FIXED` arrow color
+
 ## 2.1.0
 
 * `CHANGED` onChange add new param `activeKey`
