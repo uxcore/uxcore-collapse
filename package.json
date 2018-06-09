@@ -5,7 +5,8 @@
  "repository": "https://github.com/uxcore/uxcore-collapse.git",
  "author": "vicent.bian",
  "maintainers": [
-  "yize.shc<yize.shc@gmail.com>"
+  "yize.shc<yize.shc@gmail.com>",
+  "fengsx<fengsx@msn.com>"
  ],
  "main": "build/index.js",
  "scripts": {
@@ -36,15 +37,15 @@
  "devDependencies": {
   "console-polyfill": "^0.2.2",
   "enzyme": "^3.0.0",
-  "enzyme-adapter-react-15": "^1.0.0",
-  "es5-shim": "^4.5.8",
   "expect.js": "~0.3.1",
   "kuma-base": "1.x",
-  "react": "15.x",
-  "react-dom": "15.x",
-  "react-test-renderer": "15.x",
+  "react": "16.x",
+  "react-dom": "16.x",
+  "react-test-renderer": "16.x",
   "uxcore-kuma": "*",
-  "uxcore-tools": "0.2.x"
+  "uxcore-tools": "0.2.x",
+  "babel-polyfill": "6.x",
+  "enzyme-adapter-react-16": "1.x"
  },
  "dependencies": {
   "classnames": "^2.2.5",
@@ -52,6 +53,7 @@
   "lodash": "^4.17.5",
   "object-assign": "^4.0.0",
   "prop-types": "15.x",
+  "react-lifecycles-compat": "^3.0.4",
   "uxcore-animate": "^0.2.0"
  },
  "contributors": [],

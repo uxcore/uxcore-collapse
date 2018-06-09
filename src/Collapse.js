@@ -2,10 +2,11 @@ import React, { Component, Children } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import cloneDeep from 'lodash/cloneDeep';
+import { polyfill } from 'react-lifecycles-compat';
 import CollapsePanel from './Panel';
 import util from './util';
 
-export default class Collapse extends Component {
+class Collapse extends Component {
   static displayName = 'Collapse'
 
   static Panel = CollapsePanel
@@ -32,6 +33,16 @@ export default class Collapse extends Component {
     children: PropTypes.any,
   }
 
+  static getDerivedStateFromProps(props) {
+    if ('activeKey' in props) {
+      return {
+        activeKey: props.activeKey,
+      };
+    }
+
+    return null;
+  }
+
   constructor(props) {
     super(props);
 
@@ -49,14 +60,6 @@ export default class Collapse extends Component {
     this.state = {
       activeKey: activeKey || defaultActiveKey,
     };
-  }
-
-  componentWillReceiveProps(nextProps) {
-    if ('activeKey' in nextProps) {
-      this.setState({
-        activeKey: nextProps.activeKey,
-      });
-    }
   }
 
   getItems() {
@@ -138,3 +141,4 @@ export default class Collapse extends Component {
   }
 }
 
+export default polyfill(Collapse);
