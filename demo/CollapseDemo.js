@@ -26,6 +26,7 @@ export default class Demo extends Component {
   }
 
   handleChange(key, activeKey) {
+    // eslint-disable-next-line
     console.log(key, activeKey);
     this.setState({ activeKey });
   }
