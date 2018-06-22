@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import Enzyme, { mount, shallow } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-15';
+import Adapter from 'enzyme-adapter-react-16';
 import Collapse, {Panel} from '../src';
 
 Enzyme.configure({ adapter: new Adapter() });
@@ -61,7 +61,7 @@ describe('Collapse', () => {
 
     it('has correct click', (done) => {
         wrapper.find('.kuma-collapse-header').at(2).simulate('click')
-        expect(wrapper.state('activeKey')).to.be('3')
+        expect(wrapper.state('activeKey')).to.eql(['2'])
         // 因为click后，需要等动画延迟后才会执行util.js中active和end
         setTimeout(() => {
             done()

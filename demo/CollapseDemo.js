@@ -18,19 +18,25 @@ export default class Demo extends Component {
 
   constructor(props) {
     super(props);
+
+    this.handleChange = this.handleChange.bind(this);
     this.state = {
+      activeKey: '1',
     };
   }
 
   handleChange(key, activeKey) {
+    // eslint-disable-next-line
     console.log(key, activeKey);
+    this.setState({ activeKey });
   }
 
   render() {
+    const { activeKey } = this.state;
     return (
       <div style={{ padding: '20px' }}>
         <h2>可以同时展开多个面板，这个例子默认展开了第一个。</h2>
-        <Collapse defaultActiveKey={['1']} onChange={this.handleChange}>
+        <Collapse activeKey={activeKey} onChange={this.handleChange}>
           <Panel header={'This is panel header 1'} key="1">
             <p>{text}</p>
           </Panel>
@@ -42,7 +48,7 @@ export default class Demo extends Component {
           </Panel>
         </Collapse>
         <h2>手风琴，每次只打开一个tab。默认打开第一个。</h2>
-        <Collapse accordion onChange={this.handleChange}>
+        <Collapse accordion>
           <Panel header={'This is panel header 1'} key="1">
             <p>{text}</p>
           </Panel>
@@ -54,7 +60,7 @@ export default class Demo extends Component {
           </Panel>
         </Collapse>
         <h2>手风琴嵌套折叠面板</h2>
-        <Collapse onChange={this.handleChange} accordion>
+        <Collapse accordion>
           <Panel header={'This is panel header 1'} key="1">
             <Collapse defaultActiveKey="1">
               <Panel header={'This is panel nest panel'} key="1">
