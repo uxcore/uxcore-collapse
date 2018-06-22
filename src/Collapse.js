@@ -141,4 +141,6 @@ class Collapse extends Component {
   }
 }
 
-export default polyfill(Collapse);
+polyfill(Collapse);
+
+export default Collapse;

@@ -2,6 +2,9 @@
 
 ---
 
+## 2.1.2
+* `CHANGED` upgrade to react 16
+
 ## 2.1.1
 
 * `FIXED` arrow color
