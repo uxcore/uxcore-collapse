@@ -2,6 +2,11 @@
 
 ---
 
+## 2.2.0
+
+* `CHANGED` support js style export
+* `FIXED` some eslint error
+
 ## 2.1.2
 * `CHANGED` upgrade to react 16
 

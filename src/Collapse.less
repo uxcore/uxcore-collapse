@@ -6,9 +6,9 @@
 * All rights reserved.
 */
 
-@collapse-prefix-cls: kuma-collapse;
+@collapsePrefixCls: kuma-collapse;
 
-.@{collapse-prefix-cls} {
+.@{collapsePrefixCls} {
   background-color: @basic-100;
   border: 1px solid @normal-alpha-6;
   border-radius: 3px;
@@ -20,7 +20,7 @@
       border-top: none;
     }
 
-    > .@{collapse-prefix-cls}-header {
+    > .@{collapsePrefixCls}-header {
       height: 35px;
       line-height: 35px;
       padding-left: 32px;
@@ -87,7 +87,7 @@
   }
 
   & > &-item-active {
-    > .@{collapse-prefix-cls}-header {
+    > .@{collapsePrefixCls}-header {
 
       .arrow {
         &:before {

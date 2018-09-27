@@ -7,15 +7,10 @@ import CollapsePanel from './Panel';
 import util from './util';
 
 class Collapse extends Component {
-  static displayName = 'Collapse'
-
   static Panel = CollapsePanel
 
-  static defaultProps = {
-    prefixCls: 'kuma-collapse',
-    onChange: util.noop,
-    accordion: false,
-  }
+  static displayName = 'Collapse'
+
 
   static propTypes = {
     prefixCls: PropTypes.string,
@@ -33,15 +28,16 @@ class Collapse extends Component {
     children: PropTypes.any,
   }
 
-  static getDerivedStateFromProps(props) {
-    if ('activeKey' in props) {
-      return {
-        activeKey: props.activeKey,
-      };
-    }
-
-    return null;
+  static defaultProps = {
+    prefixCls: 'kuma-collapse',
+    onChange: util.noop,
+    accordion: false,
+    className: '',
+    activeKey: undefined,
+    defaultActiveKey: undefined,
+    children: undefined,
   }
+
 
   constructor(props) {
     super(props);
@@ -62,14 +58,24 @@ class Collapse extends Component {
     };
   }
 
+  static getDerivedStateFromProps(props) {
+    if ('activeKey' in props) {
+      return {
+        activeKey: props.activeKey,
+      };
+    }
+
+    return null;
+  }
+
   getItems() {
     const activeKey = this.getActivityKey();
-    const { prefixCls, accordion } = this.props;
+    const { prefixCls, accordion, children } = this.props;
 
-    return Children.map(this.props.children, (child, index) => {
+    return Children.map(children, (child, index) => {
       // If there is no key provide, use the panel order as default key
       const key = child.key || index;
-      const header = child.props.header;
+      const { header } = child.props;
       let isActive = false;
       if (accordion) {
         isActive = activeKey === key;
@@ -91,7 +97,7 @@ class Collapse extends Component {
   }
 
   getActivityKey() {
-    let activeKey = this.state.activeKey;
+    let { activeKey } = this.state;
     const { accordion } = this.props;
     if (accordion && Array.isArray(activeKey)) {
       activeKey = activeKey[0];
@@ -105,8 +111,9 @@ class Collapse extends Component {
 
   handleClickItem(key) {
     return () => {
+      const { accordion, onChange } = this.props;
       const activeKey = this.getActivityKey();
-      if (this.props.accordion) {
+      if (accordion) {
         this.setState({
           activeKey: key === activeKey ? null : key,
         });
@@ -122,7 +129,7 @@ class Collapse extends Component {
 
         this.setState({ activeKey });
       }
-      this.props.onChange(key, activeKey);
+      onChange(key, activeKey);
     };
   }
 
